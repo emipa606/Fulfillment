@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <Full.ModVersion>Installed mod-version: {0}</Full.ModVersion>
+  <Full.Reset>Reset to Default</Full.Reset>
+  <Full.ResetAll>Reset All to Defaults</Full.ResetAll>
+  <Full.VeryUnfulfilled>Very unfulfilled: {0}</Full.VeryUnfulfilled>
+  <Full.Unfulfilled>Unfulfilled: {0}</Full.Unfulfilled>
+  <Full.SomewhatUnfulfilled>Somewhat unfulfilled: {0}</Full.SomewhatUnfulfilled>
+  <Full.SomewhatFulfilled>Somewhat fulfilled: {0}</Full.SomewhatFulfilled>
+  <Full.Fulfilled>Fulfilled: {0}</Full.Fulfilled>
+  <Full.HighlyFulfilled>Highly fulfilled: {0}</Full.HighlyFulfilled>
+  <Full.ExtremelyFulfilled>Extremely fulfilled: {0}</Full.ExtremelyFulfilled>
+</LanguageData>

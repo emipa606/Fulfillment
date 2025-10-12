@@ -1,0 +1,5 @@
+# Changelog for Fulfillment
+
+1.6.1 - Updated for 1.6, add keyed translation strings
+Used DeepL to update translations for ChineseSimplified, French, German
+

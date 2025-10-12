@@ -1,39 +1,136 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<Defs>
-  <ThoughtDef>
-    <defName>Fulfillment_Low</defName>
-    <label>feeling unfulfilled</label>
-    <thoughtClass>Thought_MemoryDynamic</thoughtClass>
-    <durationDays>1</durationDays>
-    <stackLimit>1</stackLimit>
-    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
-    <stageThresholds>
-      <li>0.2</li>
-    </stageThresholds>
-    <stages>
-      <li>
-        <label>feeling unfulfilled</label>
-        <description>They are feeling unfulfilled in their work.</description>
-        <baseMoodEffect>-10</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-  <ThoughtDef>
-    <defName>Fulfillment_High</defName>
-    <label>feeling fulfilled</label>
-    <thoughtClass>Thought_MemoryDynamic</thoughtClass>
-    <durationDays>1</durationDays>
-    <stackLimit>1</stackLimit>
-    <effectMultiplyingStat>PsychicSensitivity</effectMultiplyingStat>
-    <stageThresholds>
-      <li>0.8</li>
-    </stageThresholds>
-    <stages>
-      <li>
-        <label>feeling fulfilled</label>
-        <description>They are feeling fulfilled in their work.</description>
-        <baseMoodEffect>10</baseMoodEffect>
-      </li>
-    </stages>
-  </ThoughtDef>
-</Defs>
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Fulfillment (Continued)</name>
+  <packageId>Mlie.Fulfillment</packageId>
+  <author>Lewkah0</author>
+  <url>https://github.com/emipa606/Fulfillment</url>
+  <supportedVersions>
+    <li>1.5</li>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+      <downloadUrl>https://github.com/pardeike/HarmonyRimWorld/releases/latest</downloadUrl>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+  </loadAfter>
+  <description>[img]https://i.postimg.cc/1X4HT06h/Info.png[/img]
+Update of Lewkah0s mod https://steamcommunity.com/sharedfiles/filedetails/?id=3303447720
+
+- Added keyed translations
+
+[img]https://i.postimg.cc/8csH3dWV/Notice.png[/img]
+
+[table]
+    [tr][td][url=https://discord.gg/h5TY6DA][img]https://i.postimg.cc/T1h9SjbF/Discord.png[/img][/url][/td] [td][url=https://github.com/emipa606/Fulfillment][img]https://i.postimg.cc/fykKF7X4/Github.png[/img][/url][/td]
+    [/tr]
+    [tr]
+        [td][img]https://i.postimg.cc/MHXD40RW/Safe-To-Add.png[/img][/td]
+        [td][img]https://i.postimg.cc/brdTM0bP/Remove-May-Work.png[/img][/td]
+    [/tr]
+[/table]
+	
+[img]https://i.postimg.cc/hvhrw8xB/Original-Description.png[/img]
+[h1]About[/h1]
+
+Have you ever had that feeling where you don't feel fulfilled because you haven't done something you're really passionate about for a while? Well now your colonists feel the same way! Introducing Fulfillment! Now they have longer-lasting feelings about whether they have been able to do what they really enjoy instead of instantly forgetting about it the moment they are done!
+
+[img]https://i.postimg.cc/yx4PBPDs/wEcP3eZ.png[/img]
+
+[h2]Features:[/h2]
+
+[h3]Dynamic Need System:[/h3]
+[b]Fulfillment:[/b] Colonists will now have a "Fulfillment" need, influencing their mood based on if they have done passionate tasks recently or not.
+
+[h3]Dynamic Rate Changes:[/h3]
+[b]Passion and Burning Passion:[/b] The rate at which your colonists gain this need depends on how passionate they are about the task they are doing.
+
+[h3]Balanced Fulfillment Rates:[/h3]
+[b]Dynamic Adjustments:[/b] The need drops and gains at rates designed to ensure balanced gameplay.
+
+[hr][/hr]
+
+[h2]Fulfillment Levels and Effects:[/h2]
+
+[table]
+[tr]
+[th]Fulfillment Level[/th]
+[th]Mood Effect[/th]
+[th]Description[/th]
+[/tr]
+[tr]
+[td]Very Low Fulfillment ( 5%):[/td]
+[td]-10[/td]
+[td]"I feel very unfulfilled because I haven't gotten to do any work I'm passionate about!"[/td]
+[/tr]
+[tr]
+[td]Low Fulfillment (5% - 20%):[/td]
+[td]-5[/td]
+[td]"I feel unfulfilled because I haven't gotten to do enough work I'm passionate about."[/td]
+[/tr]
+[tr]
+[td]Medium Low Fulfillment (20% - 40%):[/td]
+[td]-2[/td]
+[td]"I'm somewhat unfulfilled because I haven't gotten to do enough work I'm passionate about."[/td]
+[/tr]
+[tr]
+[td]Medium Fulfillment (40% - 55%):[/td]
+[td]+2[/td]
+[td]"I'm somewhat fulfilled as I've been able to do some work I'm passionate about."[/td]
+[/tr]
+[tr]
+[td]Medium High Fulfillment (55% - 80%):[/td]
+[td]+5[/td]
+[td]"I feel fulfilled because I've been able to engage in work that I'm passionate about."[/td]
+[/tr]
+[tr]
+[td]High Fulfillment (80% - 95%):[/td]
+[td]+8[/td]
+[td]"I'm highly fulfilled because I've been doing a lot of work I'm passionate about!"[/td]
+[/tr]
+[tr]
+[td]Very High Fulfillment ( 95%):[/td]
+[td]+10[/td]
+[td]"I'm extremely fulfilled because I've been doing a lot of work I'm passionate about continuously!"[/td]
+[/tr]
+[/table]
+[hr][/hr]
+
+[h2]Notes:[/h2]
+
+- Fulfillment decreases naturally over time, with the rate accelerating at higher levels.
+- Animals and mechanoids are excluded from having this need.
+
+[hr][/hr]
+
+[h2]Compatibility:[/h2]
+
+This mod is designed to be compatible with existing saves and should integrate smoothly with other mods. Ensure that you load this mod after core gameplay mods for the best experience.
+
+[hr][/hr]
+
+[h3][b]Your feedback is highly appreciated as I work towards refining and improving the mod.[/b][/h3]
+
+[h3]For more detailed feedback, send me a DM on Discord: lylerlurden[/h3]
+
+[b]If you like my stuff[/b], consider [url=https://buymeacoffee.com/lylerlurden]Supporting![/url]
+
+The [url=https://github.com/IceFlopper/Fulfillment] Github [/url]
+
+[img]https://i.postimg.cc/x8qR7GH9/Reporting-Issues.png[/img]
+[list]
+[*] See if the error persists if you just have this mod and its requirements active.
+[*] If not, try adding your other mods until it happens again.
+[*] Always post your log using the [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2873415404]Log Uploader[/url]
+[*] For best support, please use the Discord-channel for error-reporting.
+[*] Do not report errors by making a discussion-thread, I get no notification of that.
+[*] If you have the solution for a problem, please post it to the GitHub repository.
+[*] Use [url=https://github.com/RimSort/RimSort/releases/latest]RimSort[/url] to sort your mods
+[/list]</description>
+  <modVersion IgnoreIfNoMatchingField="True">1.6.1</modVersion>
+</ModMetaData>
