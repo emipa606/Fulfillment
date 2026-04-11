@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Reflection;
 using HarmonyLib;
 using RimWorld;
 using Verse;
@@ -9,29 +8,29 @@ namespace FulfillmentModNamespace;
 [HarmonyPatch(typeof(Pawn_NeedsTracker), nameof(Pawn_NeedsTracker.AllNeeds), MethodType.Getter)]
 public static class Pawn_NeedsTracker_AllNeeds
 {
-    private static void Postfix(Pawn_NeedsTracker __instance, ref List<Need> __result)
+    private static void Postfix(ref List<Need> __result, Pawn ___pawn)
     {
-        var pawn = (Pawn)typeof(Pawn_NeedsTracker).GetField("pawn", BindingFlags.Instance | BindingFlags.NonPublic)
-            ?.GetValue(__instance);
-        if (pawn != null && pawn.RaceProps.Humanlike && !__result.Exists(n => n is Need_Fulfillment))
+        if (___pawn == null || !___pawn.RaceProps.Humanlike || __result.Exists(n => n is Need_Fulfillment))
         {
-            if (hasAnyPassion(pawn))
+            if (___pawn == null)
             {
-                __result.Add(new Need_Fulfillment(pawn));
+                Log.Error("Pawn_NeedsTracker_AllNeeds_Patch: Pawn is null");
             }
+
+            return;
         }
-        else if (pawn == null)
+
+        if (FulfillmentNeedUtility.ShouldPawnTypeHaveNeed(___pawn) && hasAnyPassion(___pawn))
         {
-            Log.Error("Pawn_NeedsTracker_AllNeeds_Patch: Pawn is null");
+            __result.Add(new Need_Fulfillment(___pawn));
         }
     }
 
     private static bool hasAnyPassion(Pawn pawn)
     {
-        if (pawn.skills == null)
+        if (pawn.skills?.skills == null)
         {
-            Log.Warning("Pawn_NeedsTracker_AllNeeds_Patch: Pawn skills are null, initializing.");
-            pawn.skills = new Pawn_SkillTracker(pawn);
+            return false;
         }
 
         foreach (var skill in pawn.skills.skills)

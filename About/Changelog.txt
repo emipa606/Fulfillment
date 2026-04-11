@@ -1,5 +1,9 @@
 # Changelog for Fulfillment
 
+1.6.2 - Added option to select what pawn-types should have fulfillment needs
+Used DeepL to update translations for ChineseSimplified, French, German
+
+
 1.6.1 - Updated for 1.6, add keyed translation strings
 Used DeepL to update translations for ChineseSimplified, French, German
 

@@ -11,4 +11,7 @@
   <Full.Fulfilled>Erfüllt: {0}</Full.Fulfilled>
   <Full.HighlyFulfilled>In hohem Maße erfüllt: {0}</Full.HighlyFulfilled>
   <Full.ExtremelyFulfilled>Äußerst erfüllt: {0}</Full.ExtremelyFulfilled>
+  <Full.NeedOnPlayerPawns>Erfüllungsbedarf für spielergesteuerte Spielfiguren aktivieren</Full.NeedOnPlayerPawns>
+  <Full.NeedOnNeutralPawns>Erfüllungsbedarf für neutrale Spielfiguren aktivieren</Full.NeedOnNeutralPawns>
+  <Full.NeedOnEnemyPawns>Aktivieren Erfüllung Notwendigkeit für feindliche Bauern</Full.NeedOnEnemyPawns>
 </LanguageData>

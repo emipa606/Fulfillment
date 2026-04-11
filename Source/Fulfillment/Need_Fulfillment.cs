@@ -20,7 +20,7 @@ public class Need_Fulfillment : Need
         }
         catch (Exception ex)
         {
-            Log.Error("Need_Fulfillment constructor: " + ex.Message);
+            Log.Error($"Need_Fulfillment constructor: {ex.Message}");
         }
 
         threshPercents = [0.05f, 0.2f, 0.4f, 0.55f, 0.8f, 0.95f];
@@ -122,7 +122,7 @@ public class Need_Fulfillment : Need
             CurLevel = 0f;
         }
 
-        ApplyMoodEffects();
+        applyMoodEffects();
         switch (CurCategory)
         {
             case <= FulfillmentCategory.Low when pawn?.CurrentBed() != null && pawn.health.capacities.CanBeAwake:
@@ -137,7 +137,7 @@ public class Need_Fulfillment : Need
         }
     }
 
-    private void ApplyMoodEffects()
+    private void applyMoodEffects()
     {
         if (pawn.needs.mood == null)
         {
@@ -157,11 +157,11 @@ public class Need_Fulfillment : Need
 
         if (thoughtDef != null)
         {
-            ApplyHediffOrThought(thoughtDef);
+            applyHediffOrThought(thoughtDef);
         }
     }
 
-    private void ApplyHediffOrThought(ThoughtDef thoughtDef)
+    private void applyHediffOrThought(ThoughtDef thoughtDef)
     {
         if (pawn.needs.mood.thoughts.memories.Memories.Exists(m => m.def == thoughtDef))
         {

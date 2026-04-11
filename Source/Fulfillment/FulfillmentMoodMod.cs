@@ -25,6 +25,11 @@ public class FulfillmentMoodMod : Mod
     {
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
+        listingStandard.CheckboxLabeled("Full.NeedOnPlayerPawns".Translate(), ref Settings.needOnPlayerPawns);
+        listingStandard.CheckboxLabeled("Full.NeedOnNeutralPawns".Translate(), ref Settings.needOnNeutralPawns);
+        listingStandard.CheckboxLabeled("Full.NeedOnEnemyPawns".Translate(), ref Settings.needOnEnemyPawns);
+        listingStandard.Gap();
+
         listingStandard.Label("Full.VeryUnfulfilled".Translate(Settings.moodAmountVeryLow));
         Settings.moodAmountVeryLow = Mathf.Round(listingStandard.Slider(Settings.moodAmountVeryLow, -100f, 100f));
 

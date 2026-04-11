@@ -17,6 +17,10 @@ public class FulfillmentMoodSettings : ModSettings
     public float moodAmountVeryHigh = 10f;
     public float moodAmountVeryLow = -10f;
 
+    public bool needOnEnemyPawns;
+    public bool needOnNeutralPawns;
+    public bool needOnPlayerPawns = true;
+
     public void ResetToDefaults()
     {
         moodAmountVeryLow = -10f;
@@ -26,6 +30,9 @@ public class FulfillmentMoodSettings : ModSettings
         moodAmountMediumHigh = 5f;
         moodAmountHigh = 8f;
         moodAmountVeryHigh = 10f;
+        needOnPlayerPawns = true;
+        needOnNeutralPawns = false;
+        needOnEnemyPawns = false;
     }
 
     public override void ExposeData()
@@ -38,5 +45,8 @@ public class FulfillmentMoodSettings : ModSettings
         Scribe_Values.Look(ref moodAmountMediumHigh, "moodAmountMediumHigh", 5f);
         Scribe_Values.Look(ref moodAmountHigh, "moodAmountHigh", 8f);
         Scribe_Values.Look(ref moodAmountVeryHigh, "moodAmountVeryHigh", 10f);
+        Scribe_Values.Look(ref needOnPlayerPawns, "needOnPlayerPawns", true);
+        Scribe_Values.Look(ref needOnNeutralPawns, "needOnNeutralPawns", false);
+        Scribe_Values.Look(ref needOnEnemyPawns, "needOnEnemyPawns", false);
     }
 }

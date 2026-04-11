@@ -11,4 +11,7 @@
   <Full.Fulfilled>Réalisé : {0}</Full.Fulfilled>
   <Full.HighlyFulfilled>Très satisfait : {0}</Full.HighlyFulfilled>
   <Full.ExtremelyFulfilled>Extrêmement satisfait : {0}</Full.ExtremelyFulfilled>
+  <Full.NeedOnPlayerPawns>Activer le besoin d'accomplissement pour les pions contrôlés par le joueur</Full.NeedOnPlayerPawns>
+  <Full.NeedOnNeutralPawns>Activer le besoin d'accomplissement pour les pions neutres</Full.NeedOnNeutralPawns>
+  <Full.NeedOnEnemyPawns>Activer le besoin d'accomplissement pour les pions ennemis</Full.NeedOnEnemyPawns>
 </LanguageData>

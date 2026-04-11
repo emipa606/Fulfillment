@@ -3,6 +3,9 @@
   <Full.ModVersion>Installed mod-version: {0}</Full.ModVersion>
   <Full.Reset>Reset to Default</Full.Reset>
   <Full.ResetAll>Reset All to Defaults</Full.ResetAll>
+  <Full.NeedOnPlayerPawns>Enable fulfillment need for player-controlled pawns</Full.NeedOnPlayerPawns>
+  <Full.NeedOnNeutralPawns>Enable fulfillment need for neutral pawns</Full.NeedOnNeutralPawns>
+  <Full.NeedOnEnemyPawns>Enable fulfillment need for enemy pawns</Full.NeedOnEnemyPawns>
   <Full.VeryUnfulfilled>Very unfulfilled: {0}</Full.VeryUnfulfilled>
   <Full.Unfulfilled>Unfulfilled: {0}</Full.Unfulfilled>
   <Full.SomewhatUnfulfilled>Somewhat unfulfilled: {0}</Full.SomewhatUnfulfilled>

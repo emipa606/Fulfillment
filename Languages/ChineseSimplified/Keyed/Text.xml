@@ -11,4 +11,7 @@
   <Full.Fulfilled>完成：{0}</Full.Fulfilled>
   <Full.HighlyFulfilled>高度实现：{0}</Full.HighlyFulfilled>
   <Full.ExtremelyFulfilled>极度满足：{0}</Full.ExtremelyFulfilled>
+  <Full.NeedOnPlayerPawns>为玩家控制的棋子启用履行需求</Full.NeedOnPlayerPawns>
+  <Full.NeedOnNeutralPawns>启用中立棋子的履行需求</Full.NeedOnNeutralPawns>
+  <Full.NeedOnEnemyPawns>启用敌方棋子的履行需求</Full.NeedOnEnemyPawns>
 </LanguageData>
