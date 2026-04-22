@@ -29,7 +29,13 @@ public static class FulfillmentNeedUtility
             return settings.needOnNeutralPawns;
         }
 
-        if (pawn.Faction.HostileTo(playerFaction))
+        var relation = pawn.Faction.RelationWith(playerFaction, true);
+        if (relation == null)
+        {
+            return settings.needOnNeutralPawns;
+        }
+
+        if (relation.kind == FactionRelationKind.Hostile)
         {
             return settings.needOnEnemyPawns;
         }

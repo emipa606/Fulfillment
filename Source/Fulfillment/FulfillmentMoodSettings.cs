@@ -46,7 +46,7 @@ public class FulfillmentMoodSettings : ModSettings
         Scribe_Values.Look(ref moodAmountHigh, "moodAmountHigh", 8f);
         Scribe_Values.Look(ref moodAmountVeryHigh, "moodAmountVeryHigh", 10f);
         Scribe_Values.Look(ref needOnPlayerPawns, "needOnPlayerPawns", true);
-        Scribe_Values.Look(ref needOnNeutralPawns, "needOnNeutralPawns", false);
-        Scribe_Values.Look(ref needOnEnemyPawns, "needOnEnemyPawns", false);
+        Scribe_Values.Look(ref needOnNeutralPawns, "needOnNeutralPawns");
+        Scribe_Values.Look(ref needOnEnemyPawns, "needOnEnemyPawns");
     }
 }
