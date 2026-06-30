@@ -20,6 +20,11 @@ public static class FulfillmentNeedUtility
 
         if (pawn.Faction.IsPlayer)
         {
+            if (pawn.IsQuestHelper() || pawn.IsQuestLodger())
+            {
+                return settings.needOnNeutralPawns;
+            }
+
             return settings.needOnPlayerPawns;
         }
 

@@ -1,5 +1,8 @@
 # Changelog for Fulfillment
 
+1.6.4 - Questpawns should now be treated as neutral pawns when deciding on fulfillment need
+
+
 1.6.3 - Fixed faction null-warnings
 
 
