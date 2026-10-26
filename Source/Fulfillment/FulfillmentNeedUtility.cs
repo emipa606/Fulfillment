@@ -40,11 +40,6 @@ public static class FulfillmentNeedUtility
             return settings.needOnNeutralPawns;
         }
 
-        if (relation.kind == FactionRelationKind.Hostile)
-        {
-            return settings.needOnEnemyPawns;
-        }
-
-        return settings.needOnNeutralPawns;
+        return relation.kind == FactionRelationKind.Hostile ? settings.needOnEnemyPawns : settings.needOnNeutralPawns;
     }
 }

@@ -8,7 +8,7 @@ namespace FulfillmentModNamespace;
 [HarmonyPatch(typeof(Pawn_NeedsTracker), nameof(Pawn_NeedsTracker.AllNeeds), MethodType.Getter)]
 public static class Pawn_NeedsTracker_AllNeeds
 {
-    private static void Postfix(ref List<Need> __result, Pawn ___pawn)
+    public static void Postfix(ref List<Need> __result, Pawn ___pawn)
     {
         if (___pawn == null || !___pawn.RaceProps.Humanlike || __result.Exists(n => n is Need_Fulfillment))
         {

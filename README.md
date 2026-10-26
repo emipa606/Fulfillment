@@ -116,4 +116,4 @@ This mod is designed to be compatible with existing saves and should integrate s
 
  
 
-[![Image](https://img.shields.io/github/v/release/emipa606/Fulfillment?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585904298) | tags: mood management
+[![Image](https://img.shields.io/github/v/release/emipa606/Fulfillment?label=latest%20version&style=plastic&color=9f1111&labelColor=black)](https://steamcommunity.com/sharedfiles/filedetails/changelog/3585904298) | mood management

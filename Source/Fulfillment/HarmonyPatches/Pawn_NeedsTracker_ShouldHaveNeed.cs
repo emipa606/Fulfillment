@@ -7,7 +7,7 @@ namespace FulfillmentModNamespace;
 [HarmonyPatch(typeof(Pawn_NeedsTracker), "ShouldHaveNeed")]
 public static class Pawn_NeedsTracker_ShouldHaveNeed
 {
-    private static void Postfix(NeedDef nd, ref bool __result, Pawn ___pawn)
+    public static void Postfix(NeedDef nd, ref bool __result, Pawn ___pawn)
     {
         if (___pawn != null && nd.defName == "Fulfillment_Fulfillment")
         {

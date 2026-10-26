@@ -1,66 +1,99 @@
-# GitHub Copilot Instructions for Fulfillment Mod (Continued)
+# GitHub Copilot Instructions for Fulfillment (Continued)
 
-## Overview and Purpose
+This document outlines the coding standards, conventions, and usage of GitHub Copilot for the Fulfillment (Continued) mod. By following these guidelines, you will be able to contribute effectively to the project and maintain a high standard of code quality.
 
-**Mod Name:** Fulfillment (Continued)  
-**Author:** Lewkah0 (Updated by the community)  
-**Description:**  
-The Fulfillment mod for RimWorld introduces a new need system for colonists to reflect how fulfilled they are by engaging in tasks they are passionate about. This mod enhances the immersion by making colonists' mood dependent on the frequency and nature of their work, stimulating players to engage more thoughtfully with task assignments.
+## Mod Overview and Purpose
+
+**Fulfillment (Continued)** is an update to the Fulfillment mod, enhancing the dynamic need system of RimWorld. The mod introduces a "Fulfillment" need for colonists, influencing their mood based on their engagement in passionate tasks. Key features include dynamic rate changes, balanced fulfillment rates, and different mood effects based on fulfillment levels.
 
 ## Key Features and Systems
 
-### 1. Dynamic Need System
-- **Fulfillment Need:** Colonists now have a "Fulfillment" need that influences their mood depending on their engagement in passionate tasks.
-- **Dynamic Rate Changes:** The rate of Fulfillment gained is contingent on the passion level of the colonist for the tasks they perform.
+### Dynamic Need System
+- **Fulfillment Need**: A new need introduced for colonists, measuring their level of satisfaction with their work.
+- **Passion and Burning Passion**: Affects the rate at which colonists gain the Fulfillment need.
 
-### 2. Fulfillment Levels and Effects
-- **Very Low to Very High Fulfillment:** Varying mood effects ranging from -10 to +10 based on the levels of fulfillment.
-- **Balanced Gameplay:** Rates of need drops and gains ensure the mod is balanced and works smoothly with RimWorld's existing systems.
+### Dynamic Rate Changes
+- **Passion Level**: The rate of fulfillment gain is influenced by the colonist's passion for the task.
 
-### 3. Compatibility
-- Mod is compatible with existing saves and designed to work well with other mods.
-- Compatible with RimWorld's mod-loading order. It's recommended to load this mod after core gameplay modifications.
+### Balanced Fulfillment Rates
+- **Dynamic Adjustments**: Ensures that the need drops and gains at rates designed for balanced gameplay.
+
+### Fulfillment Levels and Effects
+- **Very Low to Very High Fulfillment**: Different mood effects based on the colonist's current fulfillment level.
 
 ## Coding Patterns and Conventions
 
-The Fulfillment mod follows a structured coding approach for maintainability and readability:
+### General Guidelines
+- **Consistent Naming**: Use clear and descriptive names for classes, methods, and variables.
+- **Documentation**: Write meaningful comments and documentation for complex logic.
+- **Code Organization**: Organize code into logical sections and use appropriate naming conventions.
 
-- **Naming Conventions:** Follow C# standard naming. For example, `CamelCase` for methods and `PascalCase` for classes.
-- **Modularity:** Significant functionality is encapsulated within its respective utility or class (e.g., `FulfillmentNeedUtility.cs`).
-- **Data Handling:** Use of `ExposeData` to manage saving/loading state.
+### C# Conventions
+- **Mod Class**: The main mod class (`FulfillmentMod.cs`) should inherit from `Mod` and implement necessary methods.
+- **Category and Definitions**: Use `FulfillmentCategory` and `CustomThoughtDefOf` to categorize and define thoughts.
+- **Mood Settings**: Implement `FulfillmentMoodSettings` for managing mood-related settings.
+
+### XML Conventions
+- **NeedDefs.xml**: Define the new Fulfillment need using XML.
+- **ThoughtDefs.xml**: Define thoughts related to fulfillment using XML.
 
 ## XML Integration
 
-The mod uses XML files to define new game content and settings:
+The Fulfillment mod uses XML files to define new needs and thoughts. Here is a brief guide to integrating XML files:
 
-- **NeedDefs.xml**: Defines custom needs and their integration into the game for colonists.
-- **ThoughtDefs.xml**: Establishes thoughts and mood effects related to different Levels of Fulfillment.
-- **About.xml**: Details mod metadata for proper integration and information display in-game.
+1. **NeedDefs.xml**: Define the Fulfillment need using the `NeedDef` tag.
+   xml
+   <NeedDef>
+     <label>Fulfillment</label>
+     <description>A new need measuring satisfaction with work.</description>
+     <statFactors>
+       <li>
+         <stat>Passion</stat>
+         <factor>0.5</factor>
+       </li>
+     </statFactors>
+   </NeedDef>
+   
+
+2. **ThoughtDefs.xml**: Define thoughts related to fulfillment using the `ThoughtDef` tag.
+   xml
+   <ThoughtDef>
+     <label>Fulfilled</label>
+     <description>Feeling fulfilled by engaging in passionate work.</description>
+     <category>CustomThoughtCategory</category>
+     <moodEffect>
+       <baseMagnitude>5</baseMagnitude>
+     </moodEffect>
+   </ThoughtDef>
+   
 
 ## Harmony Patching
 
-To seamlessly integrate with core RimWorld code, Harmony patches are employed:
+Harmony is used to patch existing RimWorld code. Here is an example of a Harmony patch in the `HarmonyPatches` namespace:
 
-- **Harmony Setup:** Uses `brrainz.harmony` to patch specific methods like `Pawn_NeedsTracker_ShouldHaveNeed` with Postfix operations.
-- **Patching Strategy:** The use of postfix patches ensures the modifications only affect their target sections, preserving game stability.
+csharp
+namespace Fulfillment.HarmonyPatches
+{
+    [HarmonyPatch(typeof(JobDriver), "DriverTick")]
+    public static class JobDriver_DriverTick
+    {
+        [HarmonyPostfix]
+        public static void Postfix(JobDriver __instance)
+        {
+            // Patch logic here
+        }
+    }
+}
+
 
 ## Suggestions for Copilot
 
-1. **Implementation of New Mechanics:** Seek suggestions on new dynamic need mechanisms or balance adjustments based on community feedback.
-2. **Optimization Patterns:** Use C# performance patterns to optimize frequently called code paths within the mod, especially in need computations.
-3. **Error Handling:** Include comprehensive logging capabilities for debugging and tracking mod performance during runtime.
-4. **Localization Enhancements:** Automate suggestions for keyed translations to support multi-language debugging.
-5. **Test Coverage:** Generate unit tests for critical systems like `FulfillmentNeedUtility` to ensure the robustness of need calculations.
+1. **Use Descriptive Comments**: Help Copilot understand the context and purpose of the code by providing detailed comments.
+2. **Provide Example Code**: Include example code snippets for complex logic to guide Copilot.
+3. **Follow Conventions**: Use the established coding conventions to ensure consistency across the mod.
+4. **Test and Validate**: Always test the generated code thoroughly to ensure it works as expected.
 
----
-
-Feedback and contributions to this mod are greatly appreciated. For detailed discussions regarding the development or issues, please join our Discord channel or submit feedback through the GitHub repository.
-
-For technical issues or troubleshooting, check the following:
-- Ensure mod compatibility by loading the Fulfillment mod without other mods initially.
-- Use the Log Uploader for logging and error-reporting.
-
-Thank you for contributing to the improvement of RimWorld's modding community!
+By following these guidelines, you will be able to effectively use GitHub Copilot to enhance the Fulfillment (Continued) mod and contribute to a high-quality RimWorld modding project.
 
 ## Project Solution Guidelines
 - Relevant mod XML files are included as Solution Items under the solution folder named XML, these can be read and modified from within the solution.
@@ -74,4 +107,6 @@ Thank you for contributing to the improvement of RimWorld's modding community!
 ## Hard rules (must follow)
 - Do NOT run commands that modify the repo (no git commit, git apply, dotnet format) unless explicitly asked.
 - Prefer minimal reads: read only the smallest code region needed (around the suspicious lines).
+- When mentioning SonarQube issues, automatically use the SonarQube MCP service to fetch and address issues instead of making inferred fixes without querying SonarQube first.
+- When mentioning the rimworld log, automatically use the Rimworld MCP service to fetch the log.
 

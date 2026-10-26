@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: Highly fulfilled! -->
+  <Fulfillment_FulfillmentHigh.label>Highly fulfilled!</Fulfillment_FulfillmentHigh.label>
+  <!-- EN: It feels great to do the things I'm passionate about! -->
+  <Fulfillment_FulfillmentHigh.description>It feels great to do the things I'm passionate about!</Fulfillment_FulfillmentHigh.description>
+  <!-- EN: Highly fulfilled! -->
+  <Fulfillment_FulfillmentHigh.stages.Highly_fulfilled.label>Highly fulfilled!</Fulfillment_FulfillmentHigh.stages.Highly_fulfilled.label>
+  <!-- EN: It feels great to do the things I'm passionate about! -->
+  <Fulfillment_FulfillmentHigh.stages.Highly_fulfilled.description>It feels great to do the things I'm passionate about!</Fulfillment_FulfillmentHigh.stages.Highly_fulfilled.description>
+  <!-- EN: Unfulfilled -->
+  <Fulfillment_FulfillmentLow.label>Unfulfilled</Fulfillment_FulfillmentLow.label>
+  <!-- EN: I haven't done much of anything I actually care about. -->
+  <Fulfillment_FulfillmentLow.description>I haven't done much of anything I actually care about.</Fulfillment_FulfillmentLow.description>
+  <!-- EN: Unfulfilled -->
+  <Fulfillment_FulfillmentLow.stages.Unfulfilled.label>Unfulfilled</Fulfillment_FulfillmentLow.stages.Unfulfilled.label>
+  <!-- EN: I haven't done much of anything I actually care about. -->
+  <Fulfillment_FulfillmentLow.stages.Unfulfilled.description>I haven't done much of anything I actually care about.</Fulfillment_FulfillmentLow.stages.Unfulfilled.description>
+  <!-- EN: Somewhat fulfilled -->
+  <Fulfillment_FulfillmentMedium.label>Somewhat fulfilled</Fulfillment_FulfillmentMedium.label>
+  <!-- EN: It's nice doing things I'm interested in. -->
+  <Fulfillment_FulfillmentMedium.description>It's nice doing things I'm interested in.</Fulfillment_FulfillmentMedium.description>
+  <!-- EN: Somewhat fulfilled -->
+  <Fulfillment_FulfillmentMedium.stages.Somewhat_fulfilled.label>Somewhat fulfilled</Fulfillment_FulfillmentMedium.stages.Somewhat_fulfilled.label>
+  <!-- EN: It's nice doing things I'm interested in. -->
+  <Fulfillment_FulfillmentMedium.stages.Somewhat_fulfilled.description>It's nice doing things I'm interested in.</Fulfillment_FulfillmentMedium.stages.Somewhat_fulfilled.description>
+  <!-- EN: Fulfilled -->
+  <Fulfillment_FulfillmentMediumHigh.label>Fulfilled</Fulfillment_FulfillmentMediumHigh.label>
+  <!-- EN: I feel pretty good about engaging in my interests! -->
+  <Fulfillment_FulfillmentMediumHigh.description>I feel pretty good about engaging in my interests!</Fulfillment_FulfillmentMediumHigh.description>
+  <!-- EN: Fulfilled -->
+  <Fulfillment_FulfillmentMediumHigh.stages.Fulfilled.label>Fulfilled</Fulfillment_FulfillmentMediumHigh.stages.Fulfilled.label>
+  <!-- EN: I feel pretty good about engaging in my interests! -->
+  <Fulfillment_FulfillmentMediumHigh.stages.Fulfilled.description>I feel pretty good about engaging in my interests!</Fulfillment_FulfillmentMediumHigh.stages.Fulfilled.description>
+  <!-- EN: Somewhat unfulfilled -->
+  <Fulfillment_FulfillmentMediumLow.label>Somewhat unfulfilled</Fulfillment_FulfillmentMediumLow.label>
+  <!-- EN: I'd like to do some work I want to do. -->
+  <Fulfillment_FulfillmentMediumLow.description>I'd like to do some work I want to do.</Fulfillment_FulfillmentMediumLow.description>
+  <!-- EN: Somewhat unfulfilled -->
+  <Fulfillment_FulfillmentMediumLow.stages.Somewhat_unfulfilled.label>Somewhat unfulfilled</Fulfillment_FulfillmentMediumLow.stages.Somewhat_unfulfilled.label>
+  <!-- EN: I'd like to do some work I want to do. -->
+  <Fulfillment_FulfillmentMediumLow.stages.Somewhat_unfulfilled.description>I'd like to do some work I want to do.</Fulfillment_FulfillmentMediumLow.stages.Somewhat_unfulfilled.description>
+  <!-- EN: Extremely fulfilled! -->
+  <Fulfillment_FulfillmentVeryHigh.label>Extremely fulfilled!</Fulfillment_FulfillmentVeryHigh.label>
+  <!-- EN: I feel like I've done so much! -->
+  <Fulfillment_FulfillmentVeryHigh.description>I feel like I've done so much!</Fulfillment_FulfillmentVeryHigh.description>
+  <!-- EN: Extremely fulfilled! -->
+  <Fulfillment_FulfillmentVeryHigh.stages.Extremely_fulfilled.label>Extremely fulfilled!</Fulfillment_FulfillmentVeryHigh.stages.Extremely_fulfilled.label>
+  <!-- EN: I feel like I've done so much! -->
+  <Fulfillment_FulfillmentVeryHigh.stages.Extremely_fulfilled.description>I feel like I've done so much!</Fulfillment_FulfillmentVeryHigh.stages.Extremely_fulfilled.description>
+  <!-- EN: Very unfulfilled! -->
+  <Fulfillment_FulfillmentVeryLow.label>Very unfulfilled!</Fulfillment_FulfillmentVeryLow.label>
+  <!-- EN: Where's the passion? The energy? I'm not getting to do any work I find purpose from! -->
+  <Fulfillment_FulfillmentVeryLow.description>Where's the passion? The energy? I'm not getting to do any work I find purpose from!</Fulfillment_FulfillmentVeryLow.description>
+  <!-- EN: Very unfulfilled! -->
+  <Fulfillment_FulfillmentVeryLow.stages.Very_unfulfilled.label>Very unfulfilled!</Fulfillment_FulfillmentVeryLow.stages.Very_unfulfilled.label>
+  <!-- EN: Where's the passion? The energy? I'm not getting to do any work I find purpose from! -->
+  <Fulfillment_FulfillmentVeryLow.stages.Very_unfulfilled.description>Where's the passion? The energy? I'm not getting to do any work I find purpose from!</Fulfillment_FulfillmentVeryLow.stages.Very_unfulfilled.description>
+</LanguageData>
